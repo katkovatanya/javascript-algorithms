@@ -11,7 +11,31 @@
 */
 
 function fizzBuzz(num) {
-    // Напишите код здесь
+    if (!Number.isInteger(num) || num < 1) {
+        console.log("Формат входящих данных не подходит");
+    }
+    else {
+        const arr = [];
+        for (i = 1; i <= num; i++) {
+            arr.push(i)
+        }
+        arr.forEach(elem => {
+            switch (true) {
+                case ((elem % 3 == 0) && (elem % 5 == 0)):
+                    console.log("fizzbuzz");
+                    break;
+                case (elem % 3 == 0):
+                    console.log("fizz");
+                    break;
+                case (elem % 5 == 0):
+                    console.log("buzz");
+                    break;
+                default:
+                    console.log(elem);
+                    break;
+            }
+        });
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

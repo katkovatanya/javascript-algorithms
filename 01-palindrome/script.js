@@ -14,7 +14,14 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
+    const array = str.toUpperCase().split('');
+    const res = array.every((elem, index, array) => {
+      if (elem == array[array.length - index - 1]) {
+        return true;
+      }
+    });
+    console.log(res);
+    return res;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -8,9 +8,21 @@
  * ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'].
  *
 */
+const vowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
 
 function findVowels(str) {
-    // Напишите код здесь
+    str = str.toLowerCase();
+    let arr = str.split('');
+    let number = arr.reduce((sum, letter) => {
+        if (vowels.includes(letter)) {
+            return sum = sum + 1;
+        }
+        else {
+            return sum;
+        }
+    }, 0);
+    console.log(number);
+    return number;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
