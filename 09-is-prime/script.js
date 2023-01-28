@@ -10,7 +10,29 @@
 */
 
 function isPrime(n) {
-    // Напишите код здесь
+  console.log(n);
+  if (!Number.isInteger(n) || n <= 1) {
+    return false;
+  }
+  else {
+    const arr = [];
+    for (i = 2; i < n; i++) {
+      arr.push(i)
+    }
+    if (arr.length == 0) {
+      return true;
+    }
+    const res = arr.reduce((res, elem) => {
+      if ((res !== true) && (n % elem !== 0)) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }, false);
+    console.log(res);
+    return res;
+  }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

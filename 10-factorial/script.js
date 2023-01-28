@@ -8,7 +8,11 @@
 */
 
 function factorial(n) {
-    // Напишите код здесь
+    const arr = [];
+    for (i = 1; i <= n; i++) {
+        arr.push(i)
+    }
+    return arr.reduce((res, elem) => res = res * elem, 1);
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
